@@ -1,0 +1,123 @@
+/* Reset body margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a gradient background to the entire body */
+body {
+  background: linear-gradient(135deg, #ff4081, #6200ea); /* gradient from pink to purple */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  color: white; /* Set text color to white for contrast */
+}
+
+/* Main container for buttons and inputs (Card) */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  backdrop-filter: blur(10px); /* Applies a blur effect to the background behind the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* More intense shadow on hover */
+}
+
+/* Button styles with gradient background */
+button {
+  background: linear-gradient(135deg, #ff4081, #6200ea); /* Gradient from pink to purple */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #f50057, #3700b3); /* Lighter gradient on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Specific styles for the Increment button */
+button:nth-of-type(5) {
+  background: linear-gradient(135deg, #03a9f4, #0288d1); /* Blue gradient */
+}
+
+button:nth-of-type(5):hover {
+  background: linear-gradient(135deg, #0288d1, #03a9f4); /* Reverse gradient on hover */
+}
+
+button:nth-of-type(5):active {
+  transform: scale(0.95);
+}
+
+/* Styling for the Reset button */
+button:nth-of-type(3) {
+  background: linear-gradient(135deg, #ff5722, #d32f2f); /* Red gradient */
+}
+
+button:nth-of-type(3):hover {
+  background: linear-gradient(135deg, #d32f2f, #ff5722); /* Reverse gradient on hover */
+}
+
+/* Input field styles with subtle focus effect */
+input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 220px;
+  margin-top: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #6200ea;
+  box-shadow: 0 0 10px rgba(98, 0, 234, 0.3);
+  background: rgba(255, 255, 255, 0.2); /* Subtle background effect when focused */
+}
+
+/* Styling for counter text */
+p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  transition: transform 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow to enhance visibility */
+}
+
+/* 3D animation for counter value */
+p.animate {
+  transform: translateZ(50px);
+}
+
+/* Glow effect on buttons and input fields when focused or hovered */
+button:focus, input:focus, button:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(98, 0, 234, 0.7);
+}
